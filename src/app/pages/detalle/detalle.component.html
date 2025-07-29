@@ -1,0 +1,52 @@
+<div class="detalle-container" *ngIf="product">
+  <div class="detalle-flex">
+    
+    <!-- Imagen -->
+    <div class="detalle-img">
+      <img [src]="product.image" alt="{{ product.name }}">
+    </div>
+
+    <!-- Información -->
+    <div class="detalle-info">
+      <h2>{{ product.name }}</h2>
+      <p><strong>Precio contado:</strong> Bs {{ product.price }}</p>
+      <p><strong>Especificaciones:</strong> {{ product.specs }}</p>
+
+      <div class="inputs-group">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" [(ngModel)]="cantidad" min="1" max="5">
+
+        <label for="cuotas">Cuotas:</label>
+        <select id="cuotas" [(ngModel)]="cuotas">
+          <option *ngFor="let m of creditOptions" [value]="m">{{ m }} Cuota{{ m > 1 ? 's' : '' }}</option>
+        </select>
+      </div>
+
+      <button class="add-cart-btn" (click)="agregarAlCarrito(product)">
+        Agregar al carrito
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Tabla -->
+  <hr>
+  <h3>Precio a crédito</h3>
+  <table>
+    <tr>
+      <th>Cantidad de cuotas</th>
+      <th>Total a pagar</th>
+      <th>Cuota mensual</th>
+    </tr>
+    <tr *ngFor="let m of creditOptions">
+      <td>{{ m }}</td>
+      <td>Bs {{ calculateTotal(product?.price || 0, m) | number:'1.2-2' }}</td>
+      <td>Bs {{ calculateMonthly(product?.price || 0, m) | number:'1.2-2' }}</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Si no existe producto -->
+<div *ngIf="!product" class="detalle-no-producto">
+  <p>Producto no encontrado.</p>
+</div>

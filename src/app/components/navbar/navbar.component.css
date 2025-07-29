@@ -1,0 +1,63 @@
+/* Estilos generales */
+body {
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    background-color: #f8f9fa; /* Fondo suave para la página */
+    color: #333; /* Color de texto */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #000000; /* Fondo oscuro para la barra */
+    padding: 10px 0;
+    border-bottom: 2px solid #ffe057; /* Línea dorada en la parte inferior */
+    .navbar {
+        font-family: 'Cormorant Garamond', serif;
+    }
+}
+
+/* Logo redondo */
+.logo {
+    width: 100px; /* Tamaño del logo */
+    height: 100px; /* Tamaño del logo */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+    border-radius: 50%; /* Hace que el logo sea redondo */
+    margin-right: 15px; /* Espaciado entre el logo y el texto */
+}
+
+/* Enlaces de la barra de navegación */
+.navbar-brand {
+    font-size: 1.5rem; /* Tamaño de fuente mayor para el nombre */
+    font-weight: bold;
+    color: #ffe057; /* Color dorado para el texto */
+}
+
+/* Estilo de los enlaces */
+.nav-link {
+    color: #ffe057; /* Color dorado para los enlaces */
+    font-size: 1.1rem; /* Tamaño de fuente más grande */
+    padding: 10px 15px; /* Espaciado alrededor del texto */
+    text-transform: uppercase; /* Mayúsculas para los enlaces */
+}
+
+/* Cambio de color de los enlaces al pasar el mouse */
+.nav-link:hover {
+    background-color: #ffe057; /* Fondo dorado al pasar el mouse */
+    color: #000000; /* Texto negro cuando se resalta */
+}
+
+/* Estilos para el botón de toggler (cuando la barra se colapsa en pantallas pequeñas) */
+.navbar-toggler-icon {
+    background-color: #ffe057; /* Icono de hamburguesa de color dorado */
+}
+.carrito-icon {
+    width: 40px; /* tamaño del carrito */
+    height: 40px;
+    cursor: pointer;
+    filter: invert(95%) sepia(8%) saturate(740%) hue-rotate(40deg) brightness(90%) contrast(90%);
+    /* Este filtro es para darle un color claro/dorado, ajusta o quita según tu imagen */
+  }
+  
+  .carrito-link:hover .carrito-icon {
+    filter: invert(25%) sepia(85%) saturate(3000%) hue-rotate(40deg) brightness(105%) contrast(120%);
+  }
+  

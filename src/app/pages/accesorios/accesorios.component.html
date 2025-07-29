@@ -1,0 +1,13 @@
+<!-- Auriculares -->
+<div class="brand-container">
+  <h2 class="brand-title">Auriculares</h2>
+  <div class="product-container">
+    <div *ngFor="let product of auricularesProducts" class="product-item" style="cursor: pointer;">
+      <a [routerLink]="['/detalle', product.name]">
+        <img [src]="product.image" alt="{{product.name}}">
+      </a>
+      <h3>{{product.name}}</h3>
+      <p>Precio: Bs {{product.price}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="formulario-container">
+  <h2>Formulario de Pago</h2>
+  <p>Completa tus datos para finalizar la compra:</p>
+
+  <form (ngSubmit)="enviarFormulario()" #formPago="ngForm">
+    <label>Nombre Completo:</label>
+    <input type="text" [(ngModel)]="nombre" name="nombre" required />
+
+    <label>Teléfono:</label>
+    <input type="tel" [(ngModel)]="telefono" name="telefono" required />
+
+    <label>Correo:</label>
+    <input type="email" [(ngModel)]="correo" name="correo" required />
+
+    <button type="submit" [disabled]="!formPago.valid">Enviar</button>
+  </form>
+
+  <p class="mensaje" *ngIf="mensaje">{{ mensaje }}</p>
+</div>

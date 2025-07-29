@@ -1,0 +1,69 @@
+<!-- Productos Xiaomi -->
+<div class="brand-container">
+  <h2 class="brand-title">Xiaomi</h2>
+  <div class="product-container">
+    <div *ngFor="let product of products" class="product-item" style="cursor: pointer;">
+      <a [routerLink]="['/detalle', product.name]">
+        <img [src]="product.image" alt="{{product.name}}">
+      </a>
+      <h3>{{product.name}}</h3>
+      <p>Precio: Bs {{product.price}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Productos Samsung -->
+<div class="brand-container">
+  <h2 class="brand-title">Samsung</h2>
+  <div class="product-container">
+    <div *ngFor="let product of samsungProducts" class="product-item" style="cursor: pointer;">
+      <a [routerLink]="['/detalle', product.name]">
+        <img [src]="product.image" alt="{{product.name}}">
+      </a>
+      <h3>{{product.name}}</h3>
+      <p>Precio: Bs {{product.price}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Productos Honor -->
+<div class="brand-container">
+  <h2 class="brand-title">Honor</h2>
+  <div class="product-container">
+    <div *ngFor="let product of honorProducts" class="product-item" style="cursor: pointer;">
+      <a [routerLink]="['/detalle', product.name]">
+        <img [src]="product.image" alt="{{product.name}}">
+      </a>
+      <h3>{{product.name}}</h3>
+      <p>Precio: Bs {{product.price}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Productos Tecno -->
+<div class="brand-container">
+  <h2 class="brand-title">Tecno</h2>
+  <div class="product-container">
+    <div *ngFor="let product of tecnoProducts" class="product-item" style="cursor: pointer;">
+      <a [routerLink]="['/detalle', product.name]">
+        <img [src]="product.image" alt="{{product.name}}">
+      </a>
+      <h3>{{product.name}}</h3>
+      <p>Precio: Bs {{product.price}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Otros Productos -->
+<div class="brand-container">
+  <h2 class="brand-title">Otros</h2>
+  <div class="product-container">
+    <div *ngFor="let product of otrosProducts" class="product-item" style="cursor: pointer;">
+      <a [routerLink]="['/detalle', product.name]">
+        <img [src]="product.image" alt="{{product.name}}">
+      </a>
+      <h3>{{product.name}}</h3>
+      <p>Precio: Bs {{product.price}}</p>
+    </div>
+  </div>
+</div>

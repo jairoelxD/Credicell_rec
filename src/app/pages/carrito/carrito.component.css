@@ -16,10 +16,17 @@
   text-align: center;
 }
 
+/* Tabla responsiva */
+.tabla-responsive {
+  overflow-x: auto;
+}
+
+/* Tabla */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  min-width: 600px; /* Asegura scroll horizontal en pantallas pequeñas */
 }
 
 th, td {
@@ -98,3 +105,41 @@ tr:hover td {
   font-weight: 500;
 }
 
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 768px) {
+  .carrito-container {
+    padding: 15px;
+  }
+
+  .carrito-total {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .btn-pagar {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.95em;
+  }
+
+  .btn-eliminar {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    min-width: 100%;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+
+  .btn-pagar {
+    font-size: 0.9em;
+    padding: 10px 18px;
+  }
+}

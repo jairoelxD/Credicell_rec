@@ -1,63 +1,85 @@
 /* Estilos generales */
 body {
-    font-family: 'Georgia', serif; /* Fuente elegante */
-    background-color: #f8f9fa; /* Fondo suave para la página */
-    color: #333; /* Color de texto */
+    font-family: 'Georgia', serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Barra de navegación */
+/* Navbar */
 .navbar {
-    background-color: #000000; /* Fondo oscuro para la barra */
+    background-color: #000000;
     padding: 10px 0;
-    border-bottom: 2px solid #ffe057; /* Línea dorada en la parte inferior */
-    .navbar {
-        font-family: 'Cormorant Garamond', serif;
-    }
+    border-bottom: 2px solid #ffe057;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 /* Logo redondo */
 .logo {
-    width: 100px; /* Tamaño del logo */
-    height: 100px; /* Tamaño del logo */
-    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
-    border-radius: 50%; /* Hace que el logo sea redondo */
-    margin-right: 15px; /* Espaciado entre el logo y el texto */
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-/* Enlaces de la barra de navegación */
+/* Texto de marca */
 .navbar-brand {
-    font-size: 1.5rem; /* Tamaño de fuente mayor para el nombre */
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #ffe057; /* Color dorado para el texto */
+    color: #ffe057;
 }
 
-/* Estilo de los enlaces */
+/* Enlaces */
 .nav-link {
-    color: #ffe057; /* Color dorado para los enlaces */
-    font-size: 1.1rem; /* Tamaño de fuente más grande */
-    padding: 10px 15px; /* Espaciado alrededor del texto */
-    text-transform: uppercase; /* Mayúsculas para los enlaces */
+    color: #ffe057;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    text-transform: uppercase;
 }
 
-/* Cambio de color de los enlaces al pasar el mouse */
+/* Hover */
 .nav-link:hover {
-    background-color: #ffe057; /* Fondo dorado al pasar el mouse */
-    color: #000000; /* Texto negro cuando se resalta */
+    background-color: #ffe057;
+    color: #000000;
 }
 
-/* Estilos para el botón de toggler (cuando la barra se colapsa en pantallas pequeñas) */
+/* Toggler icon color personalizado */
 .navbar-toggler-icon {
-    background-color: #ffe057; /* Icono de hamburguesa de color dorado */
+    filter: invert(95%) sepia(8%) saturate(740%) hue-rotate(40deg) brightness(90%) contrast(90%);
 }
+
+/* Icono carrito */
 .carrito-icon {
-    width: 40px; /* tamaño del carrito */
+    width: 40px;
     height: 40px;
     cursor: pointer;
     filter: invert(95%) sepia(8%) saturate(740%) hue-rotate(40deg) brightness(90%) contrast(90%);
-    /* Este filtro es para darle un color claro/dorado, ajusta o quita según tu imagen */
-  }
-  
-  .carrito-link:hover .carrito-icon {
+}
+
+.carrito-link:hover .carrito-icon {
     filter: invert(25%) sepia(85%) saturate(3000%) hue-rotate(40deg) brightness(105%) contrast(120%);
-  }
-  
+}
+
+/* ---------- Responsive para móviles ---------- */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .carrito-icon {
+        width: 30px;
+        height: 30px;
+    }
+}

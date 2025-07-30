@@ -1,35 +1,37 @@
 <div class="carrito-container" *ngIf="productos.length > 0; else vacio">
   <h2>Carrito de Compras</h2>
-  
-  <table>
-    <thead>
-      <tr>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Cuotas</th>
-        <th>Total (Bs)</th>
-        <th>Pago Mensual (Bs)</th>
-        <th>Acción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of productos; let i = index">
-        <td>{{p.nombre}}</td>
-        <td>{{p.cantidad}}</td>
-        <td>{{p.cuotas}}</td>
-        <td>{{p.totalPagar | number:'1.2-2'}}</td>
-        <td>{{p.cuotaMensual | number:'1.2-2'}}</td>
-        <td>
-          <button (click)="eliminarProducto(i)" class="btn-eliminar">Eliminar</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div class="tabla-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Cuotas</th>
+          <th>Total (Bs)</th>
+          <th>Pago Mensual (Bs)</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of productos; let i = index">
+          <td>{{p.nombre}}</td>
+          <td>{{p.cantidad}}</td>
+          <td>{{p.cuotas}}</td>
+          <td>{{p.totalPagar | number:'1.2-2'}}</td>
+          <td>{{p.cuotaMensual | number:'1.2-2'}}</td>
+          <td>
+            <button (click)="eliminarProducto(i)" class="btn-eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="carrito-total">
     <strong>Total General: Bs {{calcularTotal() | number:'1.2-2'}}</strong>
   </div>
-  
+
   <button class="btn-pagar" [routerLink]="['/pago']">Pagar Ahora</button>
 </div>
 

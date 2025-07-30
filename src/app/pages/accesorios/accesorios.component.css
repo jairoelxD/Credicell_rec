@@ -1,137 +1,155 @@
 /* Estilo para la sección de la marca */
 .brand-container {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título de la marca */
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.brand-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Grid flexible */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Cada producto */
+.product-item {
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button.show-button {
+  border: 2px solid green;
+  background-color: transparent;
+  color: green;
+}
+
+button.hide-button {
+  border: 2px solid red;
+  background-color: transparent;
+  color: red;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Specs */
+.specs {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Calculadora de crédito */
+.credit-options {
+  margin-top: 15px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.credit-options input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.credit-options button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.credit-options button:hover {
+  background-color: #0056b3;
+}
+
+.credit-options ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.credit-options ul li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 576px) {
   .brand-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  /* Contenedor de productos con diseño en cuadrícula */
-  .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
-  }
-  
-  /* Estilo para cada producto */
-  .product-item {
-    border: 2px solid black;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: all 0.3s ease;
-    width: 250px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  
-  /* Efecto hover para productos */
-  .product-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Imágenes de productos */
-  .product-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Botones */
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  button.show-button {
-    border: 2px solid green;
-    background-color: transparent;
-    color: green;
-  }
-  
-  button.hide-button {
-    border: 2px solid red;
-    background-color: transparent;
-    color: red;
-  }
-  
-  button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Especificaciones del producto */
-  .specs {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  /* Estilo para la calculadora de crédito */
-  .credit-options {
-    margin-top: 15px;
-    background-color: #f1f1f1;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  
-  .credit-options input {
-    padding: 8px;
-    margin-right: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 60%;
-    margin-bottom: 10px;
-  }
-  
-  .credit-options button {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .credit-options button:hover {
-    background-color: #0056b3;
-  }
-  
-  .credit-options ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-  }
-  
-  .credit-options ul li {
-    padding: 5px 0;
-    font-size: 14px;
+    font-size: 20px;
   }
 
+  .product-item {
+    width: 100%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .credit-options input {
+    width: 100%;
+    margin-right: 0;
+  }
+}

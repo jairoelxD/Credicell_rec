@@ -18,23 +18,23 @@
   margin-bottom: 15px;
 }
 
-/* Estilo para el contenedor de productos */
+/* Contenedor de productos (grid) */
 .product-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);  
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   justify-items: center;
   padding: 20px;
 }
 
-/* Estilo para cada producto */
+/* Cada producto */
 .product-item {
-  border: 2px solid black; 
+  border: 2px solid black;
   padding: 15px;
   border-radius: 8px;
   background-color: #f9f9f9;
-  transition: all 0.3s ease;  
-  width: 250px;  
+  transition: all 0.3s ease;
+  width: 250px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -43,13 +43,11 @@
   box-sizing: border-box;
 }
 
-/* Hover effect para los productos */
 .product-item:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para las imágenes de los productos */
 .product-item img {
   max-width: 100%;
   height: auto;
@@ -57,7 +55,7 @@
   margin-bottom: 10px;
 }
 
-/* Estilo para los botones */
+/* Botones generales */
 button {
   padding: 10px 20px;
   font-size: 16px;
@@ -85,14 +83,14 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para el área de especificaciones */
+/* Especificaciones */
 .product-item .specs {
   margin-top: 10px;
   font-size: 14px;
   color: #666;
 }
 
-/* Estilo para la calculadora de crédito */
+/* Calculadora de crédito */
 .credit-options {
   margin-top: 15px;
   background-color: #f1f1f1;
@@ -133,4 +131,47 @@ button:hover {
 .credit-options ul li {
   padding: 5px 0;
   font-size: 14px;
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+@media (max-width: 1200px) {
+  .product-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .product-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .credit-options input {
+    width: 100%;
+    margin-right: 0;
+  }
 }
